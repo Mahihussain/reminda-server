@@ -4,6 +4,8 @@ import cloudinary from "cloudinary";
 
 connectDB();
 
+const port = process.env.PORT || 8000;
+
 cloudinary.v2.config({
 
     cloud_name: process.env.CLOUDINARY_NAME,
@@ -12,6 +14,6 @@ cloudinary.v2.config({
 
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server Listening on port: ${process.env.PORT}`);
+app.listen(port, () => {
+    console.log(`Server Listening on port: ${port}`);
 })
